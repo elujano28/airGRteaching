@@ -1,0 +1,15 @@
+#----------------------------------   GR2M  ----------------------------------------------------------
+
+## Preparacion de los datos de entrada al modelo
+
+data_clim <- read.csv("E:/TCpm_cuencas_LT.csv")
+
+BasinObs <- data.frame("YMD"=as.POSIXlt(seq.Date(from = as.Date("1961-01-01"),to=as.Date(
+  "2021-12-01"),by="month"),format="%Y-%m-%d"), "P"=as.numeric(data_clim$Prec), "E"=as.numeric(data_clim$pet), 
+  "Q"=as.numeric(data_clim$Q)) 
+
+library(airGRteaching)
+
+ShinyGR(ObsDF = BasinObs, SimPer = c("1961-01-01", "2021-12-01"))
+
+#----------------------------------   FIN - ----------------------------------------------------------
