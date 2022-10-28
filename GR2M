@@ -11,6 +11,6 @@ BasinObs <- data.frame("YMD"=as.POSIXlt(seq.Date(from = as.Date("1961-01-01"),to
 library(airGRteaching)
 library(shiny)
 
-ShinyGR(ObsDF = BasinObs, SimPer = c("1961-01-01", "2021-12-01"), theme = "Cyborg", NamesObsBV = "Ramis")
+ShinyGR(ObsDF = BasinObs, SimPer = c("1961-01-01", "2021-12-01"), theme = "Cyborg", NamesObsBV = "RMS")
 
 #----------------------------------   FIN - ----------------------------------------------------------
